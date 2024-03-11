@@ -20,7 +20,160 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Urutan migration
+```bash
+Migrasi untuk Tabel Owners
+Migrasi untuk Tabel Technicians
+Migrasi untuk Tabel SpareParts
+Migrasi untuk Tabel ProfitSharings
+Migrasi untuk Tabel Customers
+Migrasi untuk Tabel Devices
+Migrasi untuk Tabel RepairRecords
+Migrasi untuk Tabel Payments
+Migrasi untuk Tabel Reports
+Migrasi untuk Tabel Users
+Migrasi untuk Tabel Roles
+Migrasi untuk Tabel Role_User
+Migrasi untuk Tabel AccountManagers
+```
 
+## Urutan controller
+```bash
+OwnersController - Untuk mengelola data pemilik atau admin aplikasi.
+TechniciansController - Untuk mengelola data teknisi yang akan melakukan perbaikan laptop.
+SparePartsController - Untuk mengelola data suku cadang yang akan digunakan dalam perbaikan.
+ProfitSharingsController - Untuk mengelola pembagian hasil antara teknisi dan pemilik bisnis.
+CustomersController - Untuk mengelola data pelanggan yang akan membawa laptop untuk diperbaiki.
+DevicesController - Untuk mengelola data perangkat laptop yang akan diperbaiki.
+RepairRecordsController - Untuk mencatat dan mengelola riwayat perbaikan laptop.
+PaymentsController - Untuk mencatat dan mengelola pembayaran untuk layanan perbaikan.
+ReportsController - Untuk menghasilkan laporan harian, mingguan, bulanan, dan tahunan.
+```
+
+## Urutan View
+```bash
+Owners
+
+Owner Dashboard
+Owner Profile
+
+Technicians
+
+Technician Dashboard
+Technician Profile
+
+Spare Parts
+
+List Spare Parts
+Add Spare Part Form
+Edit Spare Part Form
+
+Profit Sharing
+
+Profit Sharing Dashboard
+Add Profit Sharing Form
+Edit Profit Sharing Form
+
+Customers
+
+Customer Dashboard
+Customer Profile
+Add Customer Form
+Edit Customer Form
+
+Devices
+
+Device List (For Customer)
+Add Device Form (For Customer)
+Edit Device Form (For Customer)
+Device List (For Technician)
+Add Device Form (For Technician)
+Edit Device Form (For Technician)
+
+Repair Records
+
+Record List (For Customer)
+Record Detail (For Customer)
+Add Record Form (For Customer)
+Edit Record Form (For Customer)
+Record List (For Technician)
+Record Detail (For Technician)
+
+Payments
+
+Payment List (For Customer)
+Add Payment Form (For Customer)
+Payment List (For Technician)
+Add Payment Form (For Technician)
+
+Reports
+
+Daily Reports
+Weekly Reports
+Monthly Reports
+Yearly Reports
+```
+
+## Urutan Route
+```bash
+Owners
+
+/owners - Dashboard atau halaman utama untuk pemilik atau admin.
+/owners/profile - Profil pemilik atau admin.
+Technicians
+
+/technicians - Dashboard atau halaman utama untuk teknisi.
+/technicians/profile - Profil teknisi.
+Spare Parts
+
+/spare-parts - Daftar suku cadang.
+/spare-parts/create - Form untuk menambah suku cadang.
+/spare-parts/{id}/edit - Form untuk mengedit suku cadang.
+Profit Sharing
+
+/profit-sharing - Dashboard atau halaman utama bagi hasil.
+/profit-sharing/create - Form untuk menambah pembagian hasil.
+/profit-sharing/{id}/edit - Form untuk mengedit pembagian hasil.
+Customers
+
+/customers - Dashboard atau halaman utama untuk pelanggan.
+/customers/profile - Profil pelanggan.
+/customers/create - Form untuk menambah pelanggan.
+/customers/{id}/edit - Form untuk mengedit pelanggan.
+Devices
+
+/devices - Daftar perangkat.
+/devices/create - Form untuk menambah perangkat.
+/devices/{id}/edit - Form untuk mengedit perangkat.
+Repair Records
+
+/repair-records - Daftar catatan perbaikan.
+/repair-records/create - Form untuk menambah catatan perbaikan.
+/repair-records/{id}/edit - Form untuk mengedit catatan perbaikan.
+Payments
+
+/payments - Daftar pembayaran.
+/payments/create - Form untuk menambah pembayaran.
+Reports
+
+/reports/daily - Laporan harian.
+/reports/weekly - Laporan mingguan.
+/reports/monthly - Laporan bulanan.
+/reports/yearly - Laporan tahunan.
+```
+
+## Urutan Membuat Seeder
+```bash
+OwnersTableSeeder: Buat seeder untuk mengisi data pemilik atau admin aplikasi.
+TechniciansTableSeeder: Buat seeder untuk mengisi data teknisi yang akan melakukan perbaikan laptop.
+SparePartsTableSeeder: Buat seeder untuk mengisi data suku cadang yang akan digunakan dalam perbaikan.
+ProfitSharingsTableSeeder: Buat seeder untuk mengisi data pembagian hasil antara teknisi dan pemilik bisnis.
+CustomersTableSeeder: Buat seeder untuk mengisi data pelanggan yang akan membawa laptop untuk diperbaiki.
+DevicesTableSeeder: Buat seeder untuk mengisi data perangkat laptop yang akan diperbaiki.
+RepairRecordsTableSeeder: Buat seeder untuk mencatat dan mengelola riwayat perbaikan laptop.
+PaymentsTableSeeder: Buat seeder untuk mencatat dan mengelola pembayaran untuk layanan perbaikan.
+ReportsTableSeeder: Buat seeder untuk mengisi data laporan harian, mingguan, bulanan, dan tahunan.
+```
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
